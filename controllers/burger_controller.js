@@ -2,33 +2,34 @@ var express = require("express");
 
 var router = express.Router();
 
-// Import the model (cat.js) to use its database functions.
-var cat = require("../models/burger.js");
-/*
+// Import the model (burger.js) to use its database functions.
+var burger = require("../models/burger.js");
+
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
-  cat.all(function(data) {
+  burger.selectAll(function(data) {
     var hbsObject = {
-      cats: data
+      burgers: data
     };
     console.log(hbsObject);
     res.render("index", hbsObject);
   });
 });
-
-router.post("/api/cats", function(req, res) {
-  cat.create(["name", "sleepy"], [req.body.name, req.body.sleepy], function(result) {
+/*
+//Adding a new burger
+router.post("/api/burgers", function(req, res) {
+  burger.create(["name", "sleepy"], [req.body.name, req.body.sleepy], function(result) {
     // Send back the ID of the new quote
     res.json({ id: result.insertId });
   });
 });
 
-router.put("/api/cats/:id", function(req, res) {
+router.put("/api/burgers/:id", function(req, res) {
   var condition = "id = " + req.params.id;
 
   console.log("condition", condition);
 
-  cat.update(
+  burger.update(
     {
       sleepy: req.body.sleepy
     },
@@ -43,7 +44,7 @@ router.put("/api/cats/:id", function(req, res) {
     }
   );
 });
-
 */
+
 // Export routes for server.js to use.
 module.exports = router;
