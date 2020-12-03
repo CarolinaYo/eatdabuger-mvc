@@ -15,15 +15,20 @@ router.get("/", function(req, res) {
     res.render("index", hbsObject);
   });
 });
-/*
+
 //Adding a new burger
 router.post("/api/burgers", function(req, res) {
-  burger.create(["name", "sleepy"], [req.body.name, req.body.sleepy], function(result) {
-    // Send back the ID of the new quote
+  burger.insertOne("burger_name", [req.body.name], function(err, result) {
+    if (err) {
+      return res.status(500).end()
+    }
+    // Send back the ID
     res.json({ id: result.insertId });
+    res.redirect()
   });
 });
 
+/*
 router.put("/api/burgers/:id", function(req, res) {
   var condition = "id = " + req.params.id;
 
