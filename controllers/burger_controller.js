@@ -28,15 +28,18 @@ router.post("/api/burgers", function(req, res) {
   });
 });
 
-/*
+
+
+//Changing status to devoured = true
+
 router.put("/api/burgers/:id", function(req, res) {
   var condition = "id = " + req.params.id;
 
-  console.log("condition", condition);
+  console.log("condition ", condition);
 
-  burger.update(
+  burger.updateOne(
     {
-      sleepy: req.body.sleepy
+      devoured: 1
     },
     condition,
     function(result) {
@@ -49,7 +52,10 @@ router.put("/api/burgers/:id", function(req, res) {
     }
   );
 });
-*/
+
+//deleting from devoured list
+
+
 
 // Export routes for server.js to use.
 module.exports = router;
