@@ -1,19 +1,59 @@
+body {
+  /* background-color: peru; */
+  background-image: url("../img/burgerbackground.jpg");
+}
+.container {
+  background-color: peru;
+  max-width: 1280px;
+  margin: ;
+  height: 100%;
+  
+}
+.title{
+  font-family: 'Do Hyeon', sans-serif;
+}
+
+/* .bg {
+  background-image: url("../img/burgerbackground.jpg");
+} */
+
+ul {
+  list-style-type: none;
+padding-left: 0pt;
+}
+
 li {
+  font-family: 'Do Hyeon', sans-serif;
+  
   padding: 5px;
   margin: 5px;
   background: #faebd7;
+  border: 2px solid #ebbe91;
+  border-radius: 5px;
 }
-
+.top-group {
+  /* display: flex; */
+  align-items: center;
+}
 .label {
   font-weight: bold;
 }
 
-.create-update-form {
+ .create-form {
+  padding: 5px;
+  margin: 5px;
+  /* background: aqua; */
+}
+/* .create-update-form {
   padding: 5px;
   margin: 5px;
   background: aqua;
-}
+} */
 
 .form-group {
   margin-bottom: 5px;
 }
+
+/* .menu {
+  background-color: peru;
+} */

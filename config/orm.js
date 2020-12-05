@@ -53,18 +53,20 @@ var orm = {
     });
   },
   insertOne: function(table, cols, vals, cb) {
-    var queryString = "INSERT INTO " + table;
+    // var queryString = "INSERT INTO " + table;
 
-    queryString += " (";
-    queryString += cols.toString();
-    queryString += ") ";
-    queryString += "VALUES (";
-    queryString += printQuestionMarks(vals.length);
-    queryString += ") ";
+    // queryString += " ('";
+    // queryString += cols.toString();
+    // queryString += ") ";
+    // queryString += "VALUES (";
+    // queryString += vals.toString();
+    // queryString += ") ";
 
+    var queryString = `INSERT INTO ${table} (${cols.toString()}) VALUES ('${vals.toString()}')`;
     console.log(queryString);
 
-    connection.query(queryString, vals, function(err, result) {
+    connection.query(queryString, function(err, result) {
+      debugger;
       if (err) {
         throw err;
       }
@@ -87,10 +89,10 @@ var orm = {
       if (err) {
         throw err;
       }
-
+debugger;
       cb(result);
     });
-  }
+  },
   // deleteOne
   deleteOne: function(table, condition, cb) {
     var queryString = "DELETE FROM " + table;

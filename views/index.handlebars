@@ -1,44 +1,72 @@
-<h1>Eat Da Burger</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="title text-center text-white">Eat Da Burger</h1>
+      <div class="top-group text-center">
+        <h4 class="top-text text-center">Enter a new burger to the menu:</h4>
 
-{{!-- Burger list --}}
-<h2>Burger Menu</h2>
+        <form class="create-form">
 
-<ul>
-  {{#each burgers}}
-    {{#unless devoured}}
-    <li>
-      {{this.id}}.{{this.burger_name}}
-      <button class="change-devoured" data-id="{{id}}" data-devoured="{{devoured}}"> Devour Me</button>
-    </li>
-      
-      {{!-- {{> burgers/burger-block devoured=false}} --}}
-    {{/unless}}
-  {{/each}}
-</ul>
+          <div class="form-group">
+            <label for="burger">Burger Name:</label>
+            <input type="text" id="burger" name="name">
+            <button type="submit button" class="btn btn-warning btn-sm text-brown">Add Burger</button>
+          </div>
 
 
-{{!-- Devoured List --}}
-<h2>Devoured Burger</h2>
+        </form>
+      </div>
 
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}
-    <li>
-      {{this.id}}.{{this.burger_name}}
-      <button class="delete-burger" data-id="{{id}}"> Delete</button>
-    </li>
-      {{!-- {{> burgers/burger-block devoured=true}} --}}
-    {{/if}}
-  {{/each}}
-</ul>
+    </div>
 
-<h2>Enter a new burger to the menu:</h2>
-<form class="create-form">
 
-  <div class="form-group">
-    <label for="burger">Burger Name:</label>
-    <input type="text" id="burger" name="name">
+
   </div>
+  <div class="bg"></div>
+  <div class="row mt-3">
+<div class="col-2"></div>
+    <div class="col-md-3 menu">
+      {{!-- Burger list --}}
+      <h3>Burger Menu</h3>
+      <div>
+        <ul>
+          {{#each burgers}}
+          {{#unless devoured}}
+          <li>
+            {{this.burger_name}}
+            <button type="button" class="change-devoured btn btn-outline-success btn-sm" data-id="{{id}}"
+              data-devoured="{{devoured}}"> Devour Me!</button>
+          </li>
 
-  <button type="submit">Add Burger</button>
-</form>
+          {{!-- {{> burgers/burger-block devoured=false}} --}}
+          {{/unless}}
+          {{/each}}
+        </ul>
+      </div>
+
+    </div>
+  <div class="col-2"></div>
+
+    <div class="col-md-3">
+
+      {{!-- Devoured List --}}
+      <h3>Devoured Burger</h3>
+
+      <ul>
+        {{#each burgers}}
+        {{#if devoured}}
+        <li>
+          {{this.burger_name}}
+          <button type="button" class="delete-burger btn btn-outline-danger btn-sm" data-id="{{id}}"> Digest!</button>
+        </li>
+        {{!-- {{> burgers/burger-block devoured=true}} --}}
+        {{/if}}
+        {{/each}}
+      </ul>
+
+    </div>
+
+  </div>
+</div>
+
+</div>
