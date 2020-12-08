@@ -15,27 +15,28 @@ Then after sucessfull connection, user need to type _localhost:3000_ in the brow
 ### Link to access the app in __Heroku__:
 
 This application is also hosted in Heroku web server. \
-Click this link: https://warm-cove-79367.herokuapp.com/ to access this application.
+Click this link:  to access this application.
 
 
 ## Usage 
-### Main Page: index.html
-Using either method, user will be navigated to the main Note Taker page. \
-To begin the note taking process, user must click the __Get Started__ button presented in this page. \
-![get-started](public/assets/images/main_page.png)
+### __Main Page__: index.html
+Using either method, user will be navigated to the main __EAT DA BURGER__ page. \
+In this page, user can add, change burger state and delete a burger from the list. \
+![root](public/assets/img/root.png)
 
-### Note Taker: notes.html
-
-Adding a new burger menu: user can add a new burger menu to the list. \
+### __Adding__ a new burger menu: User can add a new burger menu to the list. 
 As user click the __Add Burger__ button, the new menu will appear on the left side of the page as the __Burger Menu__. \
-![writting_note](public/assets/images/writting_note.png)
+![add](public/assets/img/add.png) \
+The new added item/burger is displayed under Burger Menu with _Devour Me_ button. \
+![addlist](public/assets/img/addlist.png)
 
-Toggling from __Burger Menu__ to __Devoured Burger__: When user click _Devour Me_ button, the selected item will appear on the right of the page as __Devoured Burger__ \
+### __Toggling__ from __Burger Menu__ to __Devoured Burger__: When user click _Devour Me_ button, the selected item will appear on the right of the page as __Devoured Burger__ \
 Demo preview: \
-![toggle_notes](public/assets/images/toggle.gif)
+![devoured](public/assets/img/devoured.gif)
 
-To delete: User can delete a selected burger from __Devoured Burger__ list by clicking _Digest_ button. \
-![delete_notes](public/assets/images/delete_note.png)
+### __To delete__: User can delete a selected burger from __Devoured Burger__ list by clicking _Digest_ button. \
+Demo preview: \
+![digested](public/assets/img/digested.gif)
 
 ## CONTRIBUTOR
 * Background image provided by: <a href="https://pixabay.com/users/fonok-12260375/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4385386">Iftekhar Uddin Emon</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4385386">Pixabay</a>
