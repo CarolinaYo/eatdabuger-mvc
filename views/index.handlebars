@@ -8,9 +8,9 @@
         <form class="create-form">
 
           <div class="form-group">
-            {{!-- <label for="burger">Burger Name:</label> --}}
+
             <input type="text" id="burger" name="name">
-            <button type="submit button" class="btn btn-warning btn-sm text-brown">Add Burger</button>
+            <button type="submit" class="btn btn-warning btn-sm text-brown">Add Burger</button>
           </div>
         </form>
       </div>
@@ -53,7 +53,8 @@
         {{#if devoured}}
         <li><i class="fas fa-utensils"></i>
           {{this.burger_name}}
-          <button type="button" class="delete-burger btn btn-outline-danger btn-sm float-right" data-id="{{id}}"> Digest!</button>
+          <button type="button" class="delete-burger btn btn-outline-danger btn-sm float-right" data-id="{{id}}">
+            Digest!</button>
         </li>
         {{!-- {{> burgers/burger-block devoured=true}} --}}
         {{/if}}
