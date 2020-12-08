@@ -15,7 +15,7 @@ Then after sucessfull connection, user need to type _localhost:3000_ in the brow
 ### Link to access the app in __Heroku__:
 
 This application is also hosted in Heroku web server. \
-Click this link:  to access this application.
+Click this link:  https://sheltered-anchorage-23068.herokuapp.com/ to access this application.
 
 
 ## Usage 
